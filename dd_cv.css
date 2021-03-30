@@ -31,6 +31,10 @@ sup {
   break-inside: avoid;
 }
 
+.main-blocks {
+  break-inside: avoid;
+}
+
 * {
   /* Override default right margin for sidebar*/
   --pagedjs-margin-right: 0.2in;
@@ -46,6 +50,14 @@ sup {
   --decorator-border: 2px solid #7aa8b7; /* Make timeline a blue as well*/
 }
 
+/* Avoid sidebar on all pages but first */
+.pagedjs_page:not(:first-of-type) {
+  --sidebar-width: 0rem;
+  --sidebar-background-color: #ffffff;
+  --main-width: calc(var(--content-width) - var(--sidebar-width));
+  --decorator-horizontal-margin: 0.2in;
+}
+
 .details .place {
   margin-top: 0.25rem;
 }
@@ -59,8 +71,9 @@ sup {
   margin-left: -3px;
 }
 
+/* award icon isn't centered by default which is lame, same as awards */
 .fa-award {
-  margin-left: -3px;
+  margin-left: 2px;
 }
 
 /* When we have links at bottom in a list make sure they actually are numbered */
