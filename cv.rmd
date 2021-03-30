@@ -11,6 +11,7 @@ output:
     self_contained: true
 ---
 
+
 ```{r, include=FALSE}
 knitr::opts_chunk$set(
   results='asis', 
@@ -61,7 +62,7 @@ CV %>% print_contact_info()
 
 
 
-Relevant Skills {#skills}
+Technical Skills {#skills}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -76,13 +77,20 @@ CV %>% print_skill_bars()
 <!-- # } -->
 <!-- # ``` -->
 
+<!-- Strengths {#strengths} -->
+--------------------------------------------------------------------------------
+
+```{r}
+# CV %<>% print_text_block('strengths')
+```
+
 
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
 <!-- Made with the R package [**pagedown**](https://github.com/rstudio/pagedown).  -->
 
-The source code used to create this resume is available [on github.com/sjmarks/datadriven_cv](https://github.com/sjmarks/datadriven_cv).
+The source code used to create this CV is available [on github.com/sjmarks/datadriven_cv](https://github.com/sjmarks/datadriven_cv).
 
 Last updated on `r Sys.Date()`.
 
@@ -148,6 +156,13 @@ Teaching Experience {data-icon=chalkboard-teacher}
 
 ```{r}
 CV %<>% print_section('teaching_positions')
+```
+
+Academic Projects {data-icon=university}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('academic_projects')
 ```
 
 Academic Publications {data-icon=book}
