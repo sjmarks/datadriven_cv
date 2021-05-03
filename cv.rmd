@@ -158,18 +158,18 @@ Teaching Experience {data-icon=chalkboard-teacher}
 CV %<>% print_section('teaching_positions')
 ```
 
-Academic Projects {data-icon=university}
---------------------------------------------------------------------------------
-
-```{r}
-CV %<>% print_section('academic_projects')
-```
-
 Academic Publications {data-icon=book}
 --------------------------------------------------------------------------------
 
 ```{r}
 CV %<>% print_section('academic_articles')
+```
+
+Notable Graduate School Course Projects {data-icon=university}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('academic_projects_grad')
 ```
 
 Awards and Honors {data-icon=award}
