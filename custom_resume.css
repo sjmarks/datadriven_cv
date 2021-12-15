@@ -23,6 +23,7 @@
 /* Customize some of the sizing variables */
 :root {
   --sidebar-width: 12rem !important; /* Shrink sidebar width  */
+  --sidebar-background-color: #edf6f9; /* Make sidebar blue */
   --sidebar-horizontal-padding: 0.02in; /* Reduce sidebar padding */
 }
 

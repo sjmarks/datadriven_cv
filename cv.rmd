@@ -165,11 +165,11 @@ Academic Publications {data-icon=book}
 CV %<>% print_section('academic_articles')
 ```
 
-Notable Graduate School Course Projects {data-icon=university}
+Notable Coursework Projects {data-icon=university}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_section('academic_projects_grad')
+CV %<>% print_section('academic_projects')
 ```
 
 Awards and Honors {data-icon=award}
