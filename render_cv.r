@@ -7,33 +7,33 @@
 
 ############## CV
 # Knit the HTML version
-rmarkdown::render("cv.rmd",
+rmarkdown::render("cv_plus_refs.rmd",
                   params = list(pdf_mode = FALSE),
-                  output_file = "cv.html")
+                  output_file = "cv_plus_refs.html")
 
 # Knit the PDF version to temporary html location
 tmp_html_cv_loc <- fs::file_temp(ext = ".html")
-rmarkdown::render("cv.rmd",
+rmarkdown::render("cv_plus_refs.rmd",
                   params = list(pdf_mode = TRUE),
                   output_file = tmp_html_cv_loc)
 
 # Convert CV to PDF using Pagedown
 pagedown::chrome_print(input = tmp_html_cv_loc,
-                       output = "cv_sjmarks.pdf")
+                       output = "cv_plus_refs.pdf")
 
 ############## Resume
 # Knit the HTML version
-rmarkdown::render("resume.rmd",
+rmarkdown::render("resume_longer.rmd",
                   params = list(pdf_mode = FALSE),
-                  output_file = "resume_sjmarks.html")
+                  output_file = "resume_sjmarks_long.html")
 
 # Knit the PDF version to temporary html location
 tmp_html_cv_loc <- fs::file_temp(ext = ".html")
-rmarkdown::render("resume.rmd",
+rmarkdown::render("resume_longer.rmd",
                   params = list(pdf_mode = TRUE),
                   output_file = tmp_html_cv_loc)
 
 
 # Convert Resume to PDF using Pagedown
 pagedown::chrome_print(input = tmp_html_cv_loc,
-                       output = "resume_sjmarks.pdf")
+                       output = "resume_sjmarks_long.pdf")
